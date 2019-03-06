@@ -11,6 +11,12 @@
 |
 */
 
+
+	
+
 Route::get('/', function () {
-    return view('welcome');
+    return "Halaman Kategori";
 });
+
+Route::get('/viewkategori', 'CategoryController@index')->name('viewkategori');
+
