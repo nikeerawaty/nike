@@ -20,3 +20,14 @@ Route::get('/', function () {
 
 Route::get('/viewkategori', 'CategoryController@index')->name('viewkategori');
 
+Route::get('master', function(){
+    return view('layouts.master');
+});
+
+Route::get('sidebar', function(){
+    return view('layouts.sidebar');
+});
+
+Route::get('index', function(){
+    return view('dashboard.index');
+});
