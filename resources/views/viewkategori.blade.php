@@ -11,6 +11,7 @@
 <td>Deskripsi</td>
 </tr>
 
+
 @foreach($lihat as $data)
 <tr>
 <td>{{$data->category_name}}</td>

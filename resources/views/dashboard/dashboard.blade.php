@@ -1,3 +1,4 @@
+@extends('kategori')
 <!DOCTYPE html>
 <html>
 <head>

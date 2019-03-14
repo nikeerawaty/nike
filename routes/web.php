@@ -20,18 +20,18 @@ Route::get('/', function () {
 
 Route::get('/viewkategori', 'CategoryController@index')->name('viewkategori');
 
-Route::get('master', function(){
-    return view('layouts.master');
-});
+Route::resource('kategori2', 'CategoryController')->except(['destroy']);
 
-Route::get('sidebar', function(){
-    return view('layouts.sidebar');
-});
+Route::post('inputdata/store','CategoryController@store');
 
-Route::get('index', function(){
-    return view('dashboard.index');
-});
+Route::get('/hapus/destroy/{category_id}','CategoryController@destroy');
+Route::post('/datakategori/update','CategoryController@update');
 
-Route::get('dashboard', function(){
-    return view('dashboard.dashboard');
-});
+Route::get('/edit/edit/{category_id}','CategoryController@edit');
+
+Route::get('query', 'CategoryController@search');
+
+
+
+
+
